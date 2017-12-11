@@ -239,6 +239,16 @@ Interconnections between application and h/w internals of ESP32 to acquire an im
 
 ## Troubleshooting
 
+### Camera probe error codes
+
+| Code | Error | Troubleshooting |
+| :---: | :--- | :--- |
+| 0x20001 | ESP_ERR_CAMERA_NOT_DETECTED | Check SCCB connection. |
+| 0x20002 | ESP_ERR_CAMERA_FAILED_TO_SET_FRAME_SIZE | Check that resolution is supported. |
+| 0x20003 | ESP_ERR_CAMERA_NOT_SUPPORTED | Check if camera-model is supported/activated.  |
+
+### Image problems
+
 If you have issues to get the live image right, enable test pattern and see what is retrieved.
 
 To do so, run `make menuconfig`, open `Example Configuration` menu option and check `[ ] Enable test pattern on camera output`.
